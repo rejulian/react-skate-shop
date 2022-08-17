@@ -1,5 +1,6 @@
 import './App.css';
-import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import NavBar from './components/NavBar/NavBar';
 
 
 function App() {
@@ -8,6 +9,9 @@ function App() {
       <header>
         <NavBar/>
       </header>
+      <main>
+        <ItemListContainer saludo="BIENVENIDO A SKATESHOP"/>
+      </main>
     </>
   );
 }

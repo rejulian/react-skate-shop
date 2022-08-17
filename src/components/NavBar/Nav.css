@@ -1,0 +1,13 @@
+.navbar-brand{
+    position: absolute;
+}
+
+.navbar-collapse{
+    justify-content: center;
+}
+
+@media(max-width: 992px){
+    .navbar-brand{
+        position: relative;
+    }
+}
