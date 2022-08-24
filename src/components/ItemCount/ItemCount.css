@@ -1,0 +1,28 @@
+.itemContainer{
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-primary{
+    width: 50px;
+    color: white;
+    background: black;
+    font-weight: 650;
+}
+
+input{
+    width: auto;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.btn-buy{
+    width: 85%;
+    color: white;
+    margin-top: 10px;
+    background: black;
+    font-weight: 650;
+}
