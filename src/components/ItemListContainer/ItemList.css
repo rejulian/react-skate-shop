@@ -1,0 +1,51 @@
+.saludo{
+    font-family: Fugaz One;
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+
+.card-container{
+    display:flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
+    width: 70%; 
+    max-width: 1310px;
+    margin: auto;
+}
+
+.card{
+    margin: 20px;
+}
+
+.detalle{
+    width: 100%; 
+    border-radius: 0 !important;
+    cursor: auto;
+}
+
+.card-title{
+    font-family: Fugaz One;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.card-body{
+    padding-bottom: 0;
+}
+
+.stock{
+    font-weight: 700;
+}
+
+.categoria{
+    font-size: 10px;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+    color: grey;
+
+}
+

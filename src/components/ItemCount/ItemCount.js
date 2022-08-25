@@ -13,7 +13,7 @@ const ItemCount = ({initial,stock,onAdd}) => {
     }
 
   return (
-    <div className='itemContainer'>
+      <div className='itemContainer'>
         <div>
             <button className='btn-primary' onClick={decrementar}>-</button>
             <input type="number" value={count} readOnly/>
