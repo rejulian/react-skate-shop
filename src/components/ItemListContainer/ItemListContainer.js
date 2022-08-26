@@ -7,13 +7,13 @@ const ItemListContainer = ({saludo}) => {
   const [items, setItems] = useState([])
 
   useEffect(() => {
-    const task = new Promise((res, rej) => {
+    const getProducts = new Promise((res, rej) => {
       setTimeout(()=>{
         res(productos)
       }, 2000)
     });
 
-    task
+    getProducts
     .then(data => {
       setItems(data)
     })
