@@ -14,12 +14,8 @@ const ItemListContainer = ({saludo}) => {
     });
 
     getProducts
-    .then(data => {
-      setItems(data)
-    })
-    .catch(error=>{
-      console.log('error ', error);
-    })
+    .then(data => {setItems(data)})
+    .catch(error => {console.log('error ', error);})
   },[])
 
   console.log(items)

@@ -1,0 +1,53 @@
+.item-flex{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.item-right{
+    width: 450px;
+}
+
+.item-right h1{
+    font-family: Fugaz One;
+    text-transform: uppercase;
+}
+
+.item-right p{
+    text-align: justify;
+}
+
+.item-right span{
+    font-weight: 700;
+}
+
+
+/* LOADER */
+.lds-dual-ring {
+    color: black;
+    display: inline-block;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: black transparent black transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

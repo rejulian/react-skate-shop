@@ -6,9 +6,11 @@ const Item = ({item}) => {
         <h5 className="card-title">{item.title}</h5>
         <img src={item.img} className="card-img-top" alt="Imagen del producto"/>
         <div className="card-body">
-            <p className="card-text">{item.description}</p>
-            <p className="card-text"><span className='stock'>Stock: {item.stock}</span></p>
-            <p className="btn btn-dark detalle">${item.price}</p>
+            <div className='card-text-flex'>
+              <p className="card-text"><span className='stock'>${item.price}</span></p>
+              <p className="card-text"><span className='stock'>Stock: {item.stock}</span></p>
+            </div>
+            <a href='/' className="btn btn-dark detalle">Ver detalle</a>
             <p className='categoria'>{item.category}</p>
         </div>
     </div>

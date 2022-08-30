@@ -1,9 +1,8 @@
 .itemContainer{
     display: flex;
-    width: 350px;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .btn-primary{
@@ -20,7 +19,7 @@ input{
 }
 
 .btn-buy{
-    width: 85%;
+    width: 310px;
     color: white;
     margin-top: 10px;
     background: black;

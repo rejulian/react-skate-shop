@@ -18,10 +18,16 @@
     margin: 20px;
 }
 
+.card-text-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
 .detalle{
     width: 100%; 
+    margin-bottom: 5px;
     border-radius: 0 !important;
-    cursor: auto;
+    cursor: pointer;
 }
 
 .card-title{

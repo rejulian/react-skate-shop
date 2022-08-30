@@ -2,7 +2,7 @@ export const productos = [
     {
         id : 1,
         title : "Skate Element Wind",
-        description : "Descripcion Skate Element Wind",
+        description : "Nuestras tablas estan compuestas de 7 capas de maple canadiense, que es un material increíblemente resistente y duradero. Es una patineta que puede soportar mucho en forma de aterrizajes después de acrobacias y trucos en rampa mientras patinas en la calle.",
         price : 30000,
         stock : 11,
         category: "Skate Completo",
@@ -29,7 +29,7 @@ export const productos = [
     {
         id : 4,
         title : "Skate Element Hatched",
-        description : "Descripcion Skate Element Hatched",
+        description : "Nuestras tablas estan compuestas de 7 capas de maple canadiense, que es un material increíblemente resistente y duradero. Es una patineta que puede soportar mucho en forma de aterrizajes después de acrobacias y trucos en rampa mientras patinas en la calle.",
         price : 35000,
         stock : 20,
         category: "Skate Completo",
