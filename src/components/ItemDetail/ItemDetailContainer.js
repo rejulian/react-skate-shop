@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { productos } from '../Mock/productos'
 import ItemDetail from './ItemDetail'
 
@@ -8,9 +9,11 @@ const ItemDetailContainer = () => {
 
     const [isLoading, setIsLoading] = useState(true)
 
+    const {id} = useParams()
+
     useEffect(()=>{
         const getProd = new Promise((res,rej)=>{
-            const unicoProducto = productos.find(prod=>prod.id===1)
+            const unicoProducto = productos.find(prod=>prod.id=== Number(id))
             setTimeout(()=>{
                 res(unicoProducto)
             },2000)
@@ -22,7 +25,7 @@ const ItemDetailContainer = () => {
             setIsLoading(false)
         })
 
-    },[])
+    },[id])
     
     const onAdd = (count) => {
         count > 1 ? alert(`Se agregaron al carrito ${count} productos`) : alert(`Se agrego al carrito ${count} producto`)
