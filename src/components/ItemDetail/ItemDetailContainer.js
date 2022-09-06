@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { productos } from '../Mock/productos'
 import ItemDetail from './ItemDetail'
@@ -10,6 +10,10 @@ const ItemDetailContainer = () => {
     const [isLoading, setIsLoading] = useState(true)
 
     const {id} = useParams()
+
+    const onAdd = (count) => {
+        count > 1 ? alert(`Se agregaron al carrito ${count} productos`) : alert(`Se agrego al carrito ${count} producto`)
+      }
 
     useEffect(()=>{
         const getProd = new Promise((res,rej)=>{
@@ -26,10 +30,6 @@ const ItemDetailContainer = () => {
         })
 
     },[id])
-    
-    const onAdd = (count) => {
-        count > 1 ? alert(`Se agregaron al carrito ${count} productos`) : alert(`Se agrego al carrito ${count} producto`)
-      }
 
 
   return (
