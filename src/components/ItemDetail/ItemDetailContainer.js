@@ -11,10 +11,6 @@ const ItemDetailContainer = () => {
 
     const {id} = useParams()
 
-    const onAdd = (count) => {
-        count > 1 ? alert(`Se agregaron al carrito ${count} productos`) : alert(`Se agrego al carrito ${count} producto`)
-      }
-
     useEffect(()=>{
         const getProd = new Promise((res,rej)=>{
             const unicoProducto = productos.find(prod=>prod.id=== Number(id))
@@ -34,7 +30,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-        {isLoading ? <div className="lds-dual-ring"></div> : <ItemDetail prod={prod} onAdd={onAdd}/>}
+        {isLoading ? <div className="lds-dual-ring"></div> : <ItemDetail prod={prod}/>}
     </div>
   )
 }

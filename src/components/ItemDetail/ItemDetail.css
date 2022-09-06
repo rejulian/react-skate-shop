@@ -21,6 +21,18 @@
     font-weight: 700;
 }
 
+.cart-link{
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.cart-link:hover{
+  background-color: rgb(33, 33, 33);
+  color: white;
+}
 
 /* LOADER */
 .lds-dual-ring {
