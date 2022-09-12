@@ -1,16 +1,20 @@
 import React from 'react'
+import { useContext } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../../context/CartContext'
 import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 
 const ItemDetail = ({prod}) => {
 
   const [contador, setContador] = useState(0)
+  const {addItem} = useContext(CartContext)
 
   const onAdd = (count) => {
     count > 1 ? alert(`Se agregaron al carrito ${count} productos`) : alert(`Se agrego al carrito ${count} producto`)
     setContador(count)
+    addItem(prod, count)
   }
 
   return (

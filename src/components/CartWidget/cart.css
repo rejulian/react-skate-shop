@@ -7,8 +7,22 @@
     border-radius: 50%;
 }
 
+.cartIcon{
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+
 @media(max-width: 992px){
     .material-symbols-outlined{
         position: initial;
+    }
+    .cartIcon{
+        position: initial;
+        display: flex;
+        text-decoration: none;
+        color: white;
     }
 }
