@@ -6,11 +6,17 @@ import { CartContext } from '../../context/CartContext'
 const CartWidget = () => {
 
   const {cart} = useContext(CartContext)
+  let suma = 0
+  
+  cart.forEach(prod => {
+    suma += prod.cantidad
+  });
+
 
   return (
     <div className='cartIcon'>
        <span className="material-symbols-outlined">shopping_cart</span>
-       {cart.length > 0 ? <p>{cart.length}</p> : ''}
+       {suma > 0 ? <p>{suma}</p> : ''}
     </div>
   )
 }

@@ -28,9 +28,6 @@ const ItemListContainer = ({saludo}) => {
     })
     .catch(error => {console.log('error ', error);})
   },[id])
-
-  console.log(items)
-
   
   return (
     <div>

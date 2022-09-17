@@ -35,8 +35,6 @@ const CartProvider = (props) => {
 
     const clearCart = () => setCart([])
 
-    console.log(cart);
-
     return(
         <CartContext.Provider value={{cart, addItem, clearCart, removeItem}}>
             {props.children}
