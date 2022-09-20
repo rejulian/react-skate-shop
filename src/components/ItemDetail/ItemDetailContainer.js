@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { productos } from '../Mock/productos'
+// import { productos } from '../Mock/productos'
 import ItemDetail from './ItemDetail'
+import { db } from '../../firebaseConfig'
+import {collection, doc, getDoc} from 'firebase/firestore'
 
 const ItemDetailContainer = () => {
 
@@ -12,19 +14,16 @@ const ItemDetailContainer = () => {
     const {id} = useParams()
 
     useEffect(()=>{
-        const getProd = new Promise((res,rej)=>{
-            const unicoProducto = productos.find(prod=>prod.id=== Number(id))
-            setTimeout(()=>{
-                res(unicoProducto)
-            },2000)
-        })
-
-        getProd
-        .then(unicoProducto=>{
-            setProd(unicoProducto)
+       const itemCollection = collection(db,'productos')
+       const ref = doc(itemCollection,id)
+        getDoc(ref)
+        .then(res=>{
+            setProd({
+                id:res.id,
+                ...res.data()
+            })
             setIsLoading(false)
         })
-
     },[id])
 
 

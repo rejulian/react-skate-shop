@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { productos } from '../Mock/productos'
+// import { productos } from '../Mock/productos'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
+import {collection, getDocs, query, where} from 'firebase/firestore'
+import {db} from '../../firebaseConfig'
+
 
 const ItemListContainer = ({saludo}) => {
 
@@ -11,22 +14,27 @@ const ItemListContainer = ({saludo}) => {
 
   const {id} = useParams()
 
-  useEffect(() => {
-
-    const getProducts = new Promise((res, rej) => {
-      const productosFiltrados = productos.filter(prod=>prod.category === id)
-      setIsLoading(true)
-      setTimeout(()=>{
-        res(id ? productosFiltrados : productos)
-      }, 2000)
-    });
-
-    getProducts
-    .then(data => {
-      setItems(data)
+  useEffect(()=>{
+    const itemCollection = collection(db,'productos');
+    const q = id ? query(itemCollection, where('category', '==', id)) : itemCollection
+    
+    getDocs(q)
+    .then(res=>{
+      const products = res.docs.map(prod=>{
+        return{
+          id:prod.id,
+          ...prod.data()
+        };
+      })
+      setItems(products)
+    })
+    .catch(error=>{
+      console.error(error)
+    })
+    .finally(()=>{
       setIsLoading(false)
     })
-    .catch(error => {console.log('error ', error);})
+
   },[id])
   
   return (
