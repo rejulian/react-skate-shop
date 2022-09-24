@@ -24,8 +24,6 @@
     border: none;
     background: black;
     padding: 10px;
-    float: right;
-    margin-right: 30px;
 }
 
 .eliminarBtn{
@@ -53,6 +51,25 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.total-vaciar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.totalPrice{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.compra{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
 }
 
 @media (max-width: 1200px){
