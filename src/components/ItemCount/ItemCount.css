@@ -25,3 +25,9 @@ input{
     background: black;
     font-weight: 650;
 }
+
+@media (max-width: 450px){
+    .countItem{
+        margin: auto;
+    }
+}

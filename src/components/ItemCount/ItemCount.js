@@ -14,7 +14,7 @@ const ItemCount = ({initial,stock,onAdd}) => {
 
   return (
       <div className='itemContainer'>
-        <div>
+        <div className='countItem'>
             <button className='btn-primary' onClick={decrementar}>-</button>
             <input type="number" value={count} readOnly/>
             <button className='btn-primary' onClick={incrementar}>+</button>

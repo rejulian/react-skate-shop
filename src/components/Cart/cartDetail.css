@@ -94,6 +94,18 @@
     .carritoVacio h1 {
         font-size: 25px;
     }
+
+    .compra{
+        display: block;
+        margin-top: 70px;
+        text-align: center;
+    }
+
+    .compra img{
+        margin-top: 20px;
+        width: 300px;
+    }
+
 }
 
 @media (max-width: 600px){
