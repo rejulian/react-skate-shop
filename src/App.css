@@ -1,0 +1,18 @@
+footer{
+    background-color: black;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerText{
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+}
+
+.footerText span{
+    color: orange;
+}

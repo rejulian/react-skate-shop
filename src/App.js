@@ -5,6 +5,7 @@ import NavBar from './components/NavBar/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CartProvider from './context/CartContext';
 import Cart from './components/Cart/Cart';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -22,6 +23,9 @@ function App() {
             <Route path='/cart' element={<Cart/>} />
           </Routes>
         </main>
+        <footer>
+          <Footer/>
+        </footer>
       </BrowserRouter>
     </CartProvider>
   );
