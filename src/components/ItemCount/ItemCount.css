@@ -1,6 +1,6 @@
 .itemContainer{
     display: flex;
-    width: 100%;
+    width: 300px;
     flex-direction: column;
     justify-content: center;
 }
@@ -13,17 +13,20 @@
 }
 
 input{
-    width: auto;
+    width: 150px;
     text-align: center;
     margin: 0 10px;
 }
 
 .btn-buy{
-    width: 310px;
+    width: 100%;
     color: white;
     margin-top: 10px;
     background: black;
     font-weight: 650;
+}
+.countItem{
+    margin: auto;
 }
 
 @media (max-width: 450px){
