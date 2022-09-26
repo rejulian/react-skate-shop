@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID,
+  apiKey: "AIzaSyD1VL7jMpYtOKAnXcviXB0N507TIGWWN38",
+  authDomain: "skateshop-87184.firebaseapp.com",
+  projectId: "skateshop-87184",
+  storageBucket: "skateshop-87184.appspot.com",
+  messagingSenderId: "499048460558",
+  appId: "1:499048460558:web:f805d0199c64d05189a75f"
 };
 
 const app = initializeApp(firebaseConfig);
