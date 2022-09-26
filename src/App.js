@@ -8,7 +8,6 @@ import Cart from './components/Cart/Cart';
 import Footer from './components/Footer/Footer';
 
 function App() {
-  console.log(process.env);
   return (
     <CartProvider>
       <BrowserRouter>
