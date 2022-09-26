@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-// import { productos } from '../Mock/productos'
 import ItemDetail from './ItemDetail'
 import { db } from '../../firebaseConfig'
 import {collection, doc, getDoc} from 'firebase/firestore'

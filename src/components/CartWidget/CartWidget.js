@@ -16,6 +16,8 @@ const CartWidget = () => {
   return (
     <div className='cartIcon'>
        <span className="material-symbols-outlined">shopping_cart</span>
+       
+       {/* CANTIDAD DE PRODUCTOS EN EL CARRITO */}
        {suma > 0 ? <p>{suma}</p> : ''}
     </div>
   )
